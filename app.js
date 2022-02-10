@@ -2,7 +2,7 @@ const express = require("express");
 const _ = require("lodash");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost:27017/blogdb');
+mongoose.connect('mongodb+srv://prabhatpanchal0:xTQXUHAdxX8sRUfV@cluster0.ulpzv.mongodb.net/blogdb');
 const path = require("path");
 const { send } = require("process");
 
