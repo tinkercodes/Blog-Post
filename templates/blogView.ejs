@@ -1,0 +1,29 @@
+<%- include('header'); -%>
+<div class="container">
+    <div class="row mt-1 mb-3 d-flex justify-content-center">
+        <% if(page=="home"){ %>
+            <div class="col-8">
+                <h1 class="text-center">Freash Blogs</h1>
+            </div>
+        <% }else{ %>
+            <div class="col-7">
+                <h1 class="text-center">Your Blog</h1>
+            </div>
+            <div class="col-1 my-auto">
+                <a href="newBlog" class="align-middle"><button type="submit" class="btn btn-outline-info" style="font-size:larger">+</button></a>
+            </div>
+        <% } %>
+        <div class="col-8">
+            <hr>
+        </div>
+    </div>
+    <% blogs.forEach(function(blog){ %>
+        <% if(page=="home"){ %>
+            <%- include('blog', {blog: blog,user:0}); -%>
+        <% }else{ %>
+            <%- include('blog', {blog: blog,user:1}); -%>
+        <% } %>
+        
+    <% }); %>
+</div>
+<%- include('footer'); -%>

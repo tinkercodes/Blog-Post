@@ -1,0 +1,24 @@
+<%- include('header'); -%>
+<div class="container">
+    <form action="/newBlog" method="post" class="mt-3">
+        <div class="row d-flex justify-content-center">
+            <div class="mb-3 col-md-8">
+                <label for="blogTitle" class="form-label">Blog Title</label>
+                <input type="text" class="form-control" name="blogTitle" id="blogTitle" placeholder="Title of your new blog">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="mb-3 col-md-8">
+                <label for="blog" class="form-label">Blog Text</label>
+                <textarea class="form-control" id="blog" name="blogText" placeholder="Write your blog ..." rows="6"></textarea>
+            </div>  
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="mb-3 col-md-8 d-flex justify-content-end gap-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>        
+        </div>
+    </form>
+</div>
+<%- include('footer'); -%>

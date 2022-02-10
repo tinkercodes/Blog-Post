@@ -1,0 +1,41 @@
+<%- include('header'); -%>
+<div class="container">
+    <div class="row d-flex justify-content-center mt-3">
+        <div class="mb-3 col-md-8 text-center">
+            <h2 >Your Suggection &amp; Feedback</h2>
+            <hr>
+        </div>
+    </div>
+    <form action="/contactForm" method="post" >
+        <div class="row d-flex justify-content-center">
+            <div class="mb-3 col-md-2">
+                <label for="Name" class="form-label">Your Name</label>
+            </div>
+            <div class="mb-3 col-md-6">
+                <input type="text" class="form-control" name="name" id="name" placeholder="">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="mb-3 col-md-2">
+                <label for="email" class="form-label">Email</label>
+            </div>  
+            <div class="mb-3 col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="">            </div> 
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="mb-3 col-md-2">
+                <label for="feedback" class="form-label">Your Feedback</label>
+            </div>  
+            <div class="mb-3 col-md-6">
+                <textarea class="form-control" id="feedback" name="feedback" placeholder="" rows="6"></textarea>
+            </div>  
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="mb-3 col-md-8 d-flex justify-content-end gap-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>        
+        </div>
+    </form>
+</div>
+<%- include('footer'); -%>

@@ -1,0 +1,35 @@
+
+
+<div class="row blogHeader d-flex justify-content-center" id="<%= blog.id %>">
+    <div class="col-md-7">
+        <figure>
+            <blockquote class="blockquote">
+                <p><%= blog.title %></p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Posted by <cite title="Source Title"><%= blog.author %></cite>, on <%= blog.createdOn %>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-md-1">
+        <% if(user==1){ %>
+            <form action="/deleteBlog" method="post">
+                <input type="hidden" name="blogId" value="<%= blog.id %>">
+                <button type="submit" class="btn btn-light"><i class="fa fa-trash-o" ></i></button>
+            </form>
+        <% } %>
+    </div>
+</div>
+
+<div class="row d-flex justify-content-center">
+    <div class="col-md-8">
+        <div class="blogBody bg-light">
+            <P id="blogText" class="truncated"><%= blog.body %></P>
+        </div>
+    </div>
+</div>
+<div class="row my-2 d-flex justify-content-center">
+    <div class="col-md-8">
+        <hr>
+    </div>
+</div>
